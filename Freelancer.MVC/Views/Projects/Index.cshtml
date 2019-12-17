@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNet.Identity;
+
+@{
+    ViewBag.Title = "Projects";
+}
+
+<div class="section-title">
+    <div>@ViewBag.Title</div>
+</div>
+<p>
+
+    @Html.ActionLink("Create New", "Create")
+</p>
+<input type="hidden" id="partial-render" data-url="@Url.Action("ProjectRowPartial", "Projects")" /> 
+<div id="projects-container">
+    <img src="~/Content/Images/ajax-loader.gif" />
+</div>
+<script src="~/Scripts/project-index.js" type="text/javascript"></script>
+<script src="~/Scripts/project-signalr.js" type="text/javascript"></script>
+
+
